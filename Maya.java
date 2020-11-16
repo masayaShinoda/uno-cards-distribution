@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class Maya {
 	public static void main(String[] args) {
@@ -53,8 +54,38 @@ public class Maya {
 			allCards[allCards.length - 1] = "Wild +4";
 
 		}
-		System.out.println(Arrays.toString(allCards));
-		System.out.println("There are " + allCards.length + " cards in the array.");
+
+		System.out.println("There are " + allCards.length + " cards in the deck.");
+
+		// Deal cards to player
+		String[] player1_cards = {};
+		String[] player2_cards = {};
+		String[] player3_cards = {};
+
+		for (int i = 0; i < 7; i++) { // Deal 7 random cards to player 1
+			Random r = new Random();
+			int randomNumber = r.nextInt(allCards.length);
+			player1_cards = Arrays.copyOf(player1_cards, player1_cards.length + 1);
+			player1_cards[player1_cards.length - 1] = allCards[randomNumber];
+		}
+		for (int i = 0; i < 7; i++) { // Deal 7 random cards to player 2
+			Random r = new Random();
+			int randomNumber = r.nextInt(allCards.length);
+			player2_cards = Arrays.copyOf(player2_cards, player2_cards.length + 1);
+			player2_cards[player2_cards.length - 1] = allCards[randomNumber];
+		}
+		for (int i = 0; i < 7; i++) { // Deal 7 random cards to player 3
+			Random r = new Random();
+			int randomNumber = r.nextInt(allCards.length);
+			player3_cards = Arrays.copyOf(player3_cards, player3_cards.length + 1);
+			player3_cards[player3_cards.length - 1] = allCards[randomNumber];
+		}
+
+		// Displays each player's cards
+		System.out.println("Player 1 has been dealt: " + Arrays.toString(player1_cards));
+		System.out.println("Player 2 has been dealt: " + Arrays.toString(player2_cards));
+		System.out.println("Player 3 has been dealt: " + Arrays.toString(player3_cards));
+
 	}
 
 }
