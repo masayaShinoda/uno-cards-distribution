@@ -14,8 +14,6 @@ public class Maya {
 			allCards[allCards.length - 1] = colors[x] + " " + 0; // Assign new values to the last element
 		}
 		for (int j = 0; j < 4; j++) { // Loop through each color
-			// Uno cards are numbered 0 to 9
-
 			for (int i = 1; i < 10; i++) { // Give ranks from 1 to 9 for each card colors
 				allCards = Arrays.copyOf(allCards, allCards.length + 1);
 				allCards[allCards.length - 1] = colors[j] + " " + i; // Assign new values to the last element
@@ -45,8 +43,6 @@ public class Maya {
 				}
 			}
 
-			// there are four wild cards and four wild +4 cards, therefore it is possible to
-			// use the same for loop
 			// HANDLES WILD CARDS
 			allCards = Arrays.copyOf(allCards, allCards.length + 1);
 			allCards[allCards.length - 1] = "Wild";
@@ -57,7 +53,7 @@ public class Maya {
 
 		System.out.println("There are " + allCards.length + " cards in the deck.");
 
-		// Deal cards to player
+		// Deal cards to player hands
 		String[] player1_cards = {};
 		String[] player2_cards = {};
 		String[] player3_cards = {};
@@ -81,7 +77,7 @@ public class Maya {
 			player3_cards[player3_cards.length - 1] = allCards[randomNumber];
 		}
 
-		// Displays each player's cards
+		// Displays each player's hands
 		System.out.println("Player 1 has been dealt: " + Arrays.toString(player1_cards));
 		System.out.println("Player 2 has been dealt: " + Arrays.toString(player2_cards));
 		System.out.println("Player 3 has been dealt: " + Arrays.toString(player3_cards));
