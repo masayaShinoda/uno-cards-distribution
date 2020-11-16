@@ -1,5 +1,4 @@
 public class Main {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String[] colors = {"Red", "Yellow", "Green", "Blue"};
@@ -11,6 +10,6 @@ public class Main {
 				System.out.println("Card with color " + colors[j] + " and rank " + i);				
 			}
 		}
-    	}
+	}
 
 }
