@@ -2,8 +2,7 @@ import java.util.Arrays;
 
 public class Maya {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		// the allCards array will be our deck
 		String[] allCards = {};
 		String[] colors = { "Red", "Yellow", "Green", "Blue" };
 
